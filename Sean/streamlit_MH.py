@@ -78,8 +78,8 @@ print(df_pred)
 
 
 
-pca_loaded = joblib.load('pca_model.pkl')
-scaler_loaded = joblib.load('scaler_model.pkl')
+pca_loaded = joblib.load('Sean/pca_model.pkl')
+scaler_loaded = joblib.load('Sean/scaler_model.pkl')
 
 
 df_norm = scaler_loaded.transform(df_pred)
