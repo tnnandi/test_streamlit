@@ -57,7 +57,7 @@ input_array_2d = np.array([input_array])
 # In[38]:
 
 
-model = joblib.load('simpletreetest_model.pkl')
+model = joblib.load('Sean/simpletreetest_model.pkl')
 feat_names = ['Band Gap (eV)','Density (g/cm3)','Atomic Density (A3/atom)','Magnetizon (Bohr Magnetons/F.U.)','H Wt. Frac','d Character','f Character','Electronegativity','Temperature (degC)','Pressure (Atmospheres Absolute)']
 
 
