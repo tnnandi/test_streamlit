@@ -13,7 +13,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 
 from PIL import Image
-img = Image.open('netl_logo.png')
+img = Image.open('Sean/netl_logo.png')
 #st.set_page_config(page_title='Metal Hydride formation energy predictor', page_icon=img)
 
 st.set_page_config(
@@ -184,7 +184,7 @@ input_array = np.array(input_data)
 input_array_2d = np.array([input_array])
 
 
-model = joblib.load('simpletreetest_model.pkl')
+model = joblib.load('Sean/simpletreetest_model.pkl')
 feat_names = ['Band Gap (eV)','Density (g/cm3)','Atomic Density (A3/atom)','Magnetizon (Bohr Magnetons/F.U.)','H Wt. Frac','d Character','f Character','Electronegativity','Temperature (degC)','Pressure (Atmospheres Absolute)']
 
 #input_array_2d
@@ -192,8 +192,8 @@ feat_names = ['Band Gap (eV)','Density (g/cm3)','Atomic Density (A3/atom)','Magn
 df_pred = pd.DataFrame(input_array_2d,columns = feat_names)
 #print(df_pred)
 
-pca_loaded = joblib.load('pca_model.pkl')
-scaler_loaded = joblib.load('scaler_model.pkl')
+pca_loaded = joblib.load('Sean/pca_model.pkl')
+scaler_loaded = joblib.load('Sean/scaler_model.pkl')
 
 
 df_norm = scaler_loaded.transform(df_pred)  # scale features based on training data scalers
